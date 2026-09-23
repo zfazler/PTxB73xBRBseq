@@ -1,0 +1,12 @@
+Picked up _JAVA_OPTIONS: -Xmx28g
+TrimmomaticPE: Started with arguments:
+ -threads 16 -phred33 /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P3/PT_B73_Cold_P3_WKDL260013279-1A_253MY2LT4_L1_1.fq.gz /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P3/PT_B73_Cold_P3_WKDL260013279-1A_253MY2LT4_L1_2.fq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_3_R1.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_3_R1.unpaired.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_3_R2.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_3_R2.unpaired.fastq.gz ILLUMINACLIP:/usr/local/usrapps/maize/zglover/brbseq_environment/env/share/trimmomatic-0.41-0/adapters/NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:28
+ILLUMINACLIP: Using adapter file from user-specified absolute path: /usr/local/usrapps/maize/zglover/brbseq_environment/env/share/trimmomatic-0.41-0/adapters/NexteraPE-PE.fa
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 924956602 Both Surviving: 695029739 (75.14%) Forward Only Surviving: 77135001 (8.34%) Reverse Only Surviving: 148611192 (16.07%) Dropped: 4180670 (0.45%)
+TrimmomaticPE: Completed successfully

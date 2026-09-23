@@ -1,0 +1,42 @@
+==========================================
+FastQC - Pool 1
+==========================================
+FastQC:
+/rsstu/users/r/rrellan/sara/nirwan_backup/ntanduk/seqanal/bin/fastqc
+FastQC v0.12.1
+R1: /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_1_R1.fastq.gz
+R2: /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_1_R2.fastq.gz
+Running FastQC...
+application/gzip
+application/gzip
+Analysis complete for pool_1_R1.fastq.gz
+Analysis complete for pool_1_R2.fastq.gz
+==========================================
+FastQC completed for Pool 1
+Output directory:
+/rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/QC/after_trimming
+==========================================
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 920254
+    Job name          : fastqc_pool
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-22T14:29:40
+    Started           : 2026-09-22T14:55:09
+    Wait time         : 1529 sec
+    Elapsed (wall)    : 00:45:26
+    Nodes             : 1 (c201n06)
+    CPUs allocated    : 8
+    Tasks             : 1
+    CPU time (total)  : 4604.99 sec  (user 4526.04, sys 78.97)
+    CPU efficiency    : 21.1%
+    Memory in use     : 15.20 GB  (sampled at job end; see seff for peak)
+    Memory requested  : 16G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 920254
+------------------------------------------------------------

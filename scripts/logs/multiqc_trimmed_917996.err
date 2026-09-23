@@ -1,0 +1,7 @@
+
+EnvironmentNameNotFound: Could not find conda environment: brbseq_environment
+You can list all discoverable environments with `conda info --envs`.
+
+
+/var/spool/slurmd/job917996/slurm_script: line 27: fastqc: command not found
+/var/spool/slurmd/job917996/slurm_script: line 45: multiqc: command not found
