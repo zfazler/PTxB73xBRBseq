@@ -1,0 +1,45 @@
+2.7.11b
+=== STARsolo pool 1 ===
+R1:        /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_1_R1.fastq.gz  (14G)
+R2:        /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_1_R2.fastq.gz  (18G)
+Whitelist: /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/data/starsolo/barcode_whitelist.txt  (96 barcodes)
+Index:     /rsstu/users/r/rrellan/sara/ref/STAR_index
+Output:    /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_1/
+
+	/usr/local/usrapps/maize/zglover/brbseq_environment/env/bin/STAR-avx2 --runMode alignReads --runThreadN 16 --genomeDir /rsstu/users/r/rrellan/sara/ref/STAR_index --readFilesIn /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_1_R2.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_1_R1.fastq.gz --readFilesCommand zcat --soloType CB_UMI_Simple --soloCBwhitelist /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/data/starsolo/barcode_whitelist.txt --soloCBstart 1 --soloCBlen 14 --soloUMIstart 15 --soloUMIlen 14 --soloBarcodeReadLength 0 --soloCBmatchWLtype 1MM --soloUMIdedup 1MM_Directional NoDedup --soloStrand Forward --soloCellFilter None --clipAdapterType CellRanger4 --outFilterMultimapNmax 1 --outFilterIntronMotifs None --outSAMmapqUnique 60 --outSAMunmapped Within --outSAMmultNmax 1 --outSAMtype BAM SortedByCoordinate --outBAMsortingThreadN 1 --outBAMsortingBinsN 4 --outSAMattributes NH HI nM AS CR UR CB UB GX GN sS sQ sM --limitBAMsortRAM 40000000000 --outFileNamePrefix /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_1/
+	STAR version: 2.7.11b   compiled: 2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+Sep 28 16:17:51 ..... started STAR run
+Sep 28 16:17:51 ..... loading genome
+Sep 28 16:18:34 ..... started mapping
+Sep 28 16:37:18 ..... finished mapping
+Sep 28 16:37:19 ..... started Solo counting
+Sep 28 16:40:13 ..... finished Solo counting
+Sep 28 16:40:13 ..... started sorting BAM
+
+EXITING because of fatal ERROR: not enough memory for BAM sorting: 
+SOLUTION: re-run STAR with at least --limitBAMsortRAM 50260519793
+Sep 28 16:40:13 ...... FATAL ERROR, exiting
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 976689
+    Job name          : 03_STARsolo_per_pool.sh
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-28T15:17:24
+    Started           : 2026-09-28T16:17:43
+    Wait time         : 3619 sec
+    Elapsed (wall)    : 00:22:31
+    Nodes             : 1 (c024n03)
+    CPUs allocated    : 16
+    Tasks             : 1
+    CPU time (total)  : 17615.49 sec  (user 17389.90, sys 225.60)
+    CPU efficiency    : 81.5%
+    Memory in use     : 60.80 GB  (sampled at job end; see seff for peak)
+    Memory requested  : 64G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 976689
+------------------------------------------------------------

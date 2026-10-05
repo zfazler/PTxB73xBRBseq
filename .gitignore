@@ -63,3 +63,9 @@ data/processed/*
 # or add an explicit `!output/some/path` exception below.
 output/*
 !output/.gitkeep
+*.bam
+*.bai
+*.fq.gz
+*.fastq.gz
+SJ.out.tab
+Log.progress.out

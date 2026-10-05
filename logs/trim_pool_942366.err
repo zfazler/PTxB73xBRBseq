@@ -1,0 +1,2 @@
+ERROR: cutadapt not in env. Install with:
+  conda install -p /usr/local/usrapps/maize/zglover/brbseq_environment/env -c bioconda 'cutadapt>=4.4'

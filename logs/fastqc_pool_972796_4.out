@@ -1,0 +1,35 @@
+==========================================
+FastQC - Pool 4
+==========================================
+FastQC:
+/rsstu/users/r/rrellan/sara/nirwan_backup/ntanduk/seqanal/bin/fastqc
+FastQC v0.12.1
+R1: /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P4/PT_B73_Cold_P4_WKDL260013279-1A_253MY2LT4_L1_1.fq.gz
+R2: /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P4/PT_B73_Cold_P4_WKDL260013279-1A_253MY2LT4_L1_2.fq.gz
+Running FastQC...
+application/gzip
+application/gzip
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 972796
+    Job name          : fastqc_pool
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-28T09:19:54
+    Started           : 2026-09-28T09:19:55
+    Wait time         : 1 sec
+    Elapsed (wall)    : 02:00:27
+    Nodes             : 1 (c205n12)
+    CPUs allocated    : 8
+    Tasks             : 1
+    CPU time (total)  : 14268.73 sec  (user 13950.61, sys 318.18)
+    CPU efficiency    : 24.7%
+    Memory in use     : 15.20 GB  (sampled at job end; see seff for peak)
+    Memory requested  : 16G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 972796
+------------------------------------------------------------

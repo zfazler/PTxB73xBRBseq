@@ -1,0 +1,24 @@
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 942357
+    Job name          : trim_pool
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-24T09:53:07
+    Started           : 2026-09-24T09:53:08
+    Wait time         : 1 sec
+    Elapsed (wall)    : 00:00:00
+    Nodes             : 1 (c200n10)
+    CPUs allocated    : 16
+    Tasks             : 1
+    CPU time (total)  : 0.05 sec  (user 0.01, sys 0.05)
+    CPU efficiency    : N/A
+    Memory in use     : 3.72 MB  (sampled at job end; see seff for peak)
+    Memory requested  : 32G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 942357
+------------------------------------------------------------

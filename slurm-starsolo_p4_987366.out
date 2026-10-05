@@ -1,0 +1,50 @@
+2.7.11b
+=== STARsolo pool 4 ===
+R1:        /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R1.fastq.gz  (24G)
+R2:        /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R2.fastq.gz  (32G)
+Whitelist: /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/data/starsolo/barcode_whitelist.txt  (96 barcodes)
+Index:     /rsstu/users/r/rrellan/sara/ref/STAR_index
+Output:    /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/
+
+	/usr/local/usrapps/maize/zglover/brbseq_environment/env/bin/STAR-avx2 --runMode alignReads --runThreadN 16 --genomeDir /rsstu/users/r/rrellan/sara/ref/STAR_index --readFilesIn /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R2.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R1.fastq.gz --readFilesCommand zcat --soloType CB_UMI_Simple --soloCBwhitelist /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/data/starsolo/barcode_whitelist.txt --soloCBstart 1 --soloCBlen 14 --soloUMIstart 15 --soloUMIlen 14 --soloBarcodeReadLength 0 --soloCBmatchWLtype 1MM --soloUMIdedup 1MM_Directional NoDedup --soloStrand Forward --soloCellFilter None --clipAdapterType CellRanger4 --outFilterMultimapNmax 1 --outFilterIntronMotifs None --outSAMmapqUnique 60 --outSAMunmapped Within --outSAMmultNmax 1 --outSAMtype BAM SortedByCoordinate --outBAMsortingThreadN 1 --outBAMsortingBinsN 4 --outSAMattributes NH HI nM AS CR UR CB UB GX GN sS sQ sM --limitBAMsortRAM 70000000000 --outFileNamePrefix /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/
+	STAR version: 2.7.11b   compiled: 2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+Sep 29 13:37:12 ..... started STAR run
+Sep 29 13:37:12 ..... loading genome
+Sep 29 13:38:01 ..... started mapping
+Sep 29 15:29:18 ..... finished mapping
+Sep 29 15:29:19 ..... started Solo counting
+Sep 29 15:35:59 ..... finished Solo counting
+Sep 29 15:35:59 ..... started sorting BAM
+Sep 29 16:12:37 ..... finished successfully
+
+=== pool 4 done ===
+BAM:            /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/Aligned.sortedByCoord.out.bam
+UMI matrix:     /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/Solo.out/Gene/raw/umiDedup-1MM_Directional.mtx
+Raw matrix:     /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/Solo.out/Gene/raw/umiDedup-NoDedup.mtx
+Barcodes:       /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/Solo.out/Gene/raw/barcodes.tsv
+Features:       /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/Solo.out/Gene/raw/features.tsv
+Alignment log:  /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/starsolo/pool_4/Log.final.out
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 987366
+    Job name          : starsolo_p4
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-29T10:50:46
+    Started           : 2026-09-29T13:37:06
+    Wait time         : 9980 sec
+    Elapsed (wall)    : 02:35:43
+    Nodes             : 1 (c020n03)
+    CPUs allocated    : 16
+    Tasks             : 1
+    CPU time (total)  : 108110.61 sec  (user 107254.04, sys 856.58)
+    CPU efficiency    : 72.3%
+    Memory in use     : 114.00 GB  (sampled at job end; see seff for peak)
+    Memory requested  : 120G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 987366
+------------------------------------------------------------

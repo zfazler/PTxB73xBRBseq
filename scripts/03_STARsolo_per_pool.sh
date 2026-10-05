@@ -1,4 +1,7 @@
 #!/bin/bash
+#SBATCH --time=08:00:00
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=80G
 
 # ==============================================================================
 # 03 -- STARsolo per pool (HPC)
@@ -56,8 +59,8 @@ if [[ ! "$pool" =~ ^[1-4]$ ]]; then
 fi
 
 # --- paths ----------------------------------------------------------------
-baseDir="/rsstu/users/r/rrellan/sara/RNA_Sequencing_raw/BZea_CLY23D1/NVS205B_RellanAlvarez/hannah"
-repoDir="$baseDir/BZeaBRBseq"
+baseDir="/rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq"
+repoDir="/rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq"
 trimDir="${baseDir}/trimmed"
 
 R1="${trimDir}/pool_${pool}_R1.fastq.gz"
@@ -71,7 +74,7 @@ mkdir -p "$outDir"
 # --- environment ----------------------------------------------------------
 module load conda
 source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate /usr/local/usrapps/maize/hdpil/hdpil
+conda activate /usr/local/usrapps/maize/zglover/brbseq_environment/env
 
 # --- validate inputs ------------------------------------------------------
 for f in "$R1" "$R2" "$whitelist"; do
@@ -115,9 +118,9 @@ STAR \
   --outSAMmultNmax 1 \
   --outSAMtype BAM SortedByCoordinate \
   --outBAMsortingThreadN 1 \
-  --outBAMsortingBinsN 4 \
+  --outBAMsortingBinsN 50 \
   --outSAMattributes NH HI nM AS CR UR CB UB GX GN sS sQ sM \
-  --limitBAMsortRAM 40000000000 \
+  --limitBAMsortRAM 90000000000 \
   --outFileNamePrefix "${outDir}/"
 
 echo ""

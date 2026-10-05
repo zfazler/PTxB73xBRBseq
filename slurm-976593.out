@@ -1,0 +1,25 @@
+usage: /var/spool/slurmd/job976593/slurm_script <POOL_N>   (POOL_N = 1, 2, 3, or 4)
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 976593
+    Job name          : 03_STARsolo_per_pool.sh
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-28T15:10:59
+    Started           : 2026-09-28T15:11:16
+    Wait time         : 17 sec
+    Elapsed (wall)    : 00:00:01
+    Nodes             : 1 (c207n01)
+    CPUs allocated    : 1
+    Tasks             : 1
+    CPU time (total)  : 0.03 sec  (user 0.01, sys 0.03)
+    CPU efficiency    : 3.0%
+    Memory in use     : 2.45 MB  (sampled at job end; see seff for peak)
+    Memory requested  : 2G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 976593
+------------------------------------------------------------

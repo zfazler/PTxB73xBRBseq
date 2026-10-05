@@ -1,0 +1,49 @@
+=== Trimmomatic PE for pool 4 ===
+adapter file:    /usr/local/usrapps/maize/zglover/brbseq_environment/env/share/trimmomatic-0.41-0/adapters/NexteraPE-PE.fa
+R1 in:           /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P4/PT_B73_Cold_P4_WKDL260013279-1A_253MY2LT4_L1_1.fq.gz  (109G)
+R2 in:           /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P4/PT_B73_Cold_P4_WKDL260013279-1A_253MY2LT4_L1_2.fq.gz  (90G)
+R1 out:          /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R1.fastq.gz
+R2 out:          /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R2.fastq.gz
+Picked up _JAVA_OPTIONS: -Xmx28g
+TrimmomaticPE: Started with arguments:
+ -threads 16 -phred33 /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P4/PT_B73_Cold_P4_WKDL260013279-1A_253MY2LT4_L1_1.fq.gz /rsstu/users/r/rrellan/CERCA-Cold/01_Incoming/Novogene_B73xPT_Cold/X202SC26083653-Z01-F001/01.RawData/PT_B73_Cold_P4/PT_B73_Cold_P4_WKDL260013279-1A_253MY2LT4_L1_2.fq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R1.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R1.unpaired.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R2.fastq.gz /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R2.unpaired.fastq.gz ILLUMINACLIP:/usr/local/usrapps/maize/zglover/brbseq_environment/env/share/trimmomatic-0.41-0/adapters/NexteraPE-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:28
+ILLUMINACLIP: Using adapter file from user-specified absolute path: /usr/local/usrapps/maize/zglover/brbseq_environment/env/share/trimmomatic-0.41-0/adapters/NexteraPE-PE.fa
+Using PrefixPair: 'AGATGTGTATAAGAGACAG' and 'AGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTCCGAGCCCACGAGAC'
+Using Long Clipping Sequence: 'CTGTCTCTTATACACATCTGACGCTGCCGACGA'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 1909392061 Both Surviving: 661584083 (34.65%) Forward Only Surviving: 182710982 (9.57%) Reverse Only Surviving: 1045309284 (54.75%) Dropped: 19787712 (1.04%)
+TrimmomaticPE: Completed successfully
+
+=== pool 4 trim done ===
+-rw-rw----+ 1 zglover oit-rsrch-rrellan-cerca-cold 25268793471 Sep 23 14:36 /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R1.fastq.gz
+-rw-rw----+ 1 zglover oit-rsrch-rrellan-cerca-cold 33797207669 Sep 23 14:36 /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq/trimmed/pool_4_R2.fastq.gz
+
+Summary lines from log:
+Input Read Pairs: 1909392061 Both Surviving: 661584083 (34.65%) Forward Only Surviving: 182710982 (9.57%) Reverse Only Surviving: 1045309284 (54.75%) Dropped: 19787712 (1.04%)
+
+------------------------------------------------------------
+Resource usage summary:
+
+    Job ID            : 928937
+    Job name          : trim_pool
+    User / Account    : zglover / dssrwksp_cpu
+    Partition / QOS   : compute / normal
+    Submitted         : 2026-09-23T11:44:02
+    Started           : 2026-09-23T12:16:56
+    Wait time         : 1974 sec
+    Elapsed (wall)    : 02:20:02
+    Nodes             : 1 (c025n01)
+    CPUs allocated    : 16
+    Tasks             : 1
+    CPU time (total)  : 98393.93 sec  (user 97663.44, sys 730.51)
+    CPU efficiency    : 73.2%
+    Memory in use     : 30.40 GB  (sampled at job end; see seff for peak)
+    Memory requested  : 32G
+    Working directory : /rsstu/users/r/rrellan/CERCA-Cold/PTxB73xBRBseq
+    Exit code         : 0:0
+
+    For final accounting (Slurm's MaxRSS, billing, etc.):  seff 928937
+------------------------------------------------------------
