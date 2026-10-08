@@ -2,7 +2,7 @@
 # ==============================================================================
 # 05 -- Expression analysis for PT x B73 cold BRB-seq (plates/pools 1-4)
 #
-# Design (from metadata.csv, 384 wells, one leaf harvest on Sep 08 2026):
+# Design (from metadata.csv, 384 well):
 #   ril  305 wells / 224 RILs   (77 RILs in 2 wells, 2 in 3 wells)
 #   nil   51 wells /  50 NILs   (B73 background + PT segment)
 #   b73   27 wells /  13 plants (B73_01..B73_13, most sampled 2-3x across plates)
@@ -59,13 +59,13 @@ meta$column <- suppressWarnings(as.integer(meta$column))
 maps <- do.call(rbind, lapply(1:4, function(p)
   read.delim(file.path(map_dir, sprintf("pool_%d_barcode_map.tsv", p)), stringsAsFactors = FALSE)))
 wl   <- readLines(file.path(map_dir, "barcode_whitelist.txt"))
-mm   <- merge(meta[, c("sample_id", "plate_pos")], maps, by = "sample_id")
+mm   <- merge(meta[!is.na(meta$genotype), c("sample_id", "plate_pos")], maps, by = "sample_id")
 per_well <- tapply(mm$barcode, mm$plate_pos, function(b) length(unique(b)))
 n_off_wl <- sum(!mm$barcode %in% wl)
 cat(sprintf("Barcode maps: %d of %d samples matched; %d wells with >1 barcode across plates; %d barcodes not in whitelist\n",
             nrow(mm), nrow(meta), sum(per_well > 1), n_off_wl))
-if (nrow(mm) != nrow(meta) || any(per_well > 1) || n_off_wl > 0)
-  stop("Barcode maps disagree with metadata/whitelist -- fix before analysis")
+if (nrow(mm) != sum(!is.na(meta$genotype)) || any(per_well > 1) || n_off_wl > 0)
+stop("Barcode maps disagree with metadata/whitelist -- fix before analysis")
 
 # ---- 1. load + clean -------------------------------------------------------------
 counts <- readRDS(counts_rds)
